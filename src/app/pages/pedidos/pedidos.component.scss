@@ -1,0 +1,32 @@
+.back{
+    font-size: 25px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.pedidos{
+    margin: 0;
+    padding: 0;
+
+    .titulo{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        font-size: 15px;
+    }
+}
+
+.contenido{
+    ion-card{
+        ion-card-content{
+            padding-top: 0;
+            padding-bottom: 5px;
+
+            ion-label{
+                font-size: 10px;
+                font-weight: 700;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

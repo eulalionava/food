@@ -8,6 +8,13 @@ ion-header{
 
 ion-content{
     --background: #f6f6f6;
+
+    .mi-orden{
+        border-radius: 2px;
+        border: 1px solid #e0dada;
+        margin: 5px;
+        text-align: start;
+    }
 }
 
 .sesion{
@@ -24,12 +31,21 @@ ion-content{
             font-weight: bold;
         }
     }
-    
+
     ion-img{
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    ion-card-content{
+        input{
+            border-radius: 20px;
+            height: 3rem;
+            box-shadow: 0 0 5px 5px #eae5e5;
+            font-family: auto;
+        }
     }
 }
 
@@ -49,6 +65,12 @@ ion-content{
     ion-card-content{
         ion-img{
             border-radius: 6px !important;
+        }
+
+        ion-button{
+            height: 50px;
+            font-size: 15px;
+            font-weight: bold;
         }
     }
 }

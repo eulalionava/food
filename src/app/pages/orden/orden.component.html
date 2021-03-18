@@ -1,0 +1,66 @@
+<ion-content>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title text-center">Proceso de orden</h4>
+    </div>
+  </div>
+
+  <ion-grid class="orden">
+    <ion-row>
+      
+      <ion-col size="8">
+        <h4>Bistec en salsa verde</h4>
+      </ion-col>
+      <ion-col size="4">
+        <ion-img src="../../assets/salsa_verde.png"></ion-img>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12"><p>Hora:</p></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-slides [options]="slideOpts">
+    <ion-slide>
+      <div *ngFor="let hora of horarios">
+        <input type="button" value="{{hora}}" class="btn btn-outline-success">
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <hr>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8">Ordenes: <strong>{{numero_orden}}</strong></ion-col>
+      <ion-col size="2"><input type="button" value="-" class="btn btn-outline-primary btn-sm"></ion-col>
+      <ion-col size="2"><input type="button" value="+" class="btn btn-outline-primary btn-sm"></ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12"><p>Refrescos:</p></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-slides [options]="slideOpts">
+    <ion-slide>
+      <div *ngFor="let soda of refrescos">
+        <input type="button" value="{{soda}}" class="btn btn-outline-success">
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <hr>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">Total: <strong>{{60}}</strong></ion-col>
+      <ion-col size="12" class="d-flex justify-content-center">
+        <input type="button" value="Finalizar orden" class="btn btn-success" (click)="finalizar()">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

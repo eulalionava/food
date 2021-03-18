@@ -1,0 +1,36 @@
+ion-content{
+    .icon-back{
+        margin:18px 0 0 0;
+        font-size: 25px;
+    }
+
+    .orden{
+        border-radius: 10px;
+
+        ion-card-subtitle{
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        ion-card-content{
+            ion-grid{
+                h4{
+                    font-weight: bold;
+                }
+                ion-label{
+                    font-weight: bold;
+                }
+
+                ion-button{
+                    border-radius: 30px;
+                    height: 3rem;
+                    font-size: 15px;
+                    font-weight: bold;
+                    font-family: inherit;
+                    box-shadow: 0px 0px 3px 1px #d9b7b7;
+                }
+            }
+        }
+    }
+
+}

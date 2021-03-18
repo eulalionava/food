@@ -7,7 +7,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-card class="sesion">
+
+  <ion-card class="sesion" *ngIf="sesion == 0">
     <ion-card-header>
       <ion-card-subtitle>Inicia sesion</ion-card-subtitle>
 
@@ -15,23 +16,30 @@
     <ion-img src="https://i.pinimg.com/originals/25/dc/b5/25dcb5f2db2f56068d52c873c16db335.png"></ion-img>
 
     <ion-card-content>
-      <div class="form-group mb-4">
-        <input type="text" placeholder="Escribe tu usuario" class="form-control">
-      </div>
+      <form #formLogin="ngForm">
+        <div class="form-group mb-4">
+          <input type="text" placeholder="Escribe tu usuario" class="form-control">
+        </div>
+  
+        <div class="form-group mb-4">
+          <input type="text" placeholder="Escribe tu contraseña" class="form-control">
+        </div>
+  
+        <div class="form-group">
+          <input type="button" class="btn btn-success w-100" value="Iniciar" >
+        </div>
+      </form>
 
-      <div class="form-group mb-4">
-        <input type="text" placeholder="Escribe tu contraseña" class="form-control">
-      </div>
-
-      <div class="form-group">
-        <input type="button" class="btn btn-success w-100" value="Iniciar" >
-      </div>
-      
     </ion-card-content>
 
   </ion-card>
 
-  <ion-slides *ngIf="sesion">
+  <ion-button color="light" expand="full" class="mi-orden" (click)="procesoOrden()" *ngIf="sesion != 0">
+    Tu orden en proceso
+    <ion-icon name="arrow-forward-outline"></ion-icon>
+  </ion-button>
+
+  <ion-slides *ngIf="sesion != 0">
     <ion-slide>
       <ion-card class="card-slide">
         <ion-card-header>
@@ -46,7 +54,7 @@
           <ion-img src="../../assets/salsa_verde.png"></ion-img>
           <ion-row>
             <ion-col size="12">
-              <ion-button color="success">Ordernar</ion-button>
+              <ion-button color="success" (click)="ordernar()">Ordernar</ion-button>
             </ion-col>
           </ion-row>
         </ion-card-content>
@@ -54,7 +62,7 @@
     </ion-slide>
 
     <ion-slide>
-      <ion-card>
+      <ion-card class="card-slide">
         <ion-card-header>
           <ion-row>
             <ion-col size="12" class="ion-text-center">
@@ -62,7 +70,7 @@
             </ion-col>
           </ion-row>
         </ion-card-header>
-        
+
         <ion-card-content>
           <ion-img src="../../assets/salsa_verde.png"></ion-img>
           <ion-row>

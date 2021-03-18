@@ -1,0 +1,16 @@
+ion-content{
+
+    .orden{
+
+        background: #ebdef1;
+        border-radius: 10px; 
+        border: 1px solid #8080804d; 
+        margin: 10px; 
+        box-shadow: 0 7px 10px 3px #cbc6c6;
+        ion-row{
+            ion-img{
+                --border-radius: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<ion-content>
+  <ion-card class="menu-comidas">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="10">
+            <h5>Eulalio Cruz Nava</h5>
+          </ion-col>
+          <ion-col size="2">
+            <ion-icon name="close-circle" class="close" (click)="cerrar()"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+        <h5>Bistec en salsa verde</h5>
+        <img src="../../assets/salsa_verde.png" alt="">
+        <ion-radio-group>
+          <ion-item>
+            <ion-label>2:00 PM</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Extra: Petsi de litros</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Total: $60</ion-label>
+          </ion-item>
+        </ion-radio-group>
+        <ion-button color="success" class="d-flex w-100">Orden terminada</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
